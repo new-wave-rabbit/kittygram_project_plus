@@ -3,6 +3,8 @@ from rest_framework import serializers
 
 from .models import Cat, Owner, Achievement, AchievementCat
 
+
+
 class AchievementSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -36,9 +38,7 @@ class CatSerializer(serializers.ModelSerializer):
             # И связываем каждое достижение с этим котиком
             AchievementCat.objects.create(
                 achievement=current_achievement, cat=cat)
-        return cat 
-
-
+        return cat
 
 
 class OwnerSerializer(serializers.ModelSerializer):
@@ -47,4 +47,5 @@ class OwnerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Owner
         fields = ('first_name', 'last_name', 'cats')
+
 

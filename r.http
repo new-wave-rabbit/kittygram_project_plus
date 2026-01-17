@@ -1,0 +1,48 @@
+###
+POST http://127.0.0.1:8000/cats/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "blackcat",
+    "color": "black",
+    "birth_year": 2009,
+    "owner": 1
+}
+
+###
+GET http://127.0.0.1:8000/cats/
+
+###
+PATCH http://127.0.0.1:8000/cats/1/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "blackcat1",
+    "color": "black1",
+    "birth_year": 2009
+}
+###
+GET http://127.0.0.1:8000/owners/
+###
+POST http://127.0.0.1:8000/owners/ HTTP/1.1
+content-type: application/json
+
+{
+    "first_name": "Иван",
+    "last_name": "Иванов"
+}
+
+### 
+POST http://127.0.0.1:8000/cats/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Барсик",
+    "color": "White",
+    "birth_year": 2017,
+    "owner": 1,
+    "achievements": [
+        {"name": "поймал мышку"},
+        {"name": "разбил вазу"}
+    ]
+} 
