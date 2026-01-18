@@ -16,7 +16,7 @@ Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 ###
 GET http://127.0.0.1:8000/cats/1
-# Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4ODI1OTU2LCJpYXQiOjE3Njg3Mzk1NTYsImp0aSI6IjE2ZTM4MzgyNGM1MTRlZGZhYmYyN2ExZTJiZDZlNDBmIiwidXNlcl9pZCI6IjIifQ.VXa5eK3AXF4d3sg4GiaxZHQTiYk6guCre7O4pfIN_vI
 
 ###
 GET http://127.0.0.1:8000/cats/recent-white-cats/
@@ -96,6 +96,20 @@ POST http://127.0.0.1:8000/auth/users/ HTTP/1.1
 content-type: application/json
 
 {
-    "username": "idotsenko",
-    "password": "korgAX3GHSPA"
+    "username": "test",
+    "password": "testtest1234"
 }
+### 
+POST http://127.0.0.1:8000/auth/jwt/create/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "testtest1234"
+}
+
+
+# {
+#   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2ODgyNTk1NiwiaWF0IjoxNzY4NzM5NTU2LCJqdGkiOiI0YTc0ZmQyNzllNzY0MjI4YmFjZWJiMmI2ZjI4ZDNjYiIsInVzZXJfaWQiOiIyIn0.vvBGNk0WJEwzg_J2Gt73KR66cbqaWe4zr6eWU62rCo8",
+#   "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4ODI1OTU2LCJpYXQiOjE3Njg3Mzk1NTYsImp0aSI6IjE2ZTM4MzgyNGM1MTRlZGZhYmYyN2ExZTJiZDZlNDBmIiwidXNlcl9pZCI6IjIifQ.VXa5eK3AXF4d3sg4GiaxZHQTiYk6guCre7O4pfIN_vI"
+# }
