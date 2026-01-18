@@ -22,7 +22,7 @@ class CatSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'color', 'birth_year', 'owner', 'achievements', 'age')
 
     def get_age(self, obj):
-        return dt.datetime.now().year - obj.birth_year 
+        return dt.datetime.now().year - obj.birth_year
 
     def create(self, validated_data):
         # Если в исходном запросе не было поля achievements
