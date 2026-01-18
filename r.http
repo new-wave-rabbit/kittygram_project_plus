@@ -19,6 +19,8 @@ GET http://127.0.0.1:8000/cats/1
 ###
 GET http://127.0.0.1:8000/cats/recent-white-cats/
 
+###
+GET http://127.0.0.1:8000/mycats/3
 
 
 ###
