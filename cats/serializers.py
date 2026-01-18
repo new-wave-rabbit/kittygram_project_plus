@@ -26,10 +26,11 @@ class Hex2NameColor(serializers.Field):
 
 
 class AchievementSerializer(serializers.ModelSerializer):
+    achievement_name = serializers.CharField(source='name')
 
     class Meta:
         model = Achievement
-        fields = ('id', 'name')
+        fields = ('id', 'achievement_name')
 
 
 class CatSerializer(serializers.ModelSerializer):
@@ -39,7 +40,8 @@ class CatSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cat
-        fields = ('id', 'name', 'color', 'birth_year', 'owner', 'achievements', 'age')
+        fields = ('id', 'name', 'color', 'birth_year', 'owner', 'achievements',
+                  'age')
 
     def get_age(self, obj):
         return dt.datetime.now().year - obj.birth_year

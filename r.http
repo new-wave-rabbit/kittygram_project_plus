@@ -4,9 +4,13 @@ content-type: application/json
 
 {
     "name": "blackcat",
-    "color": "black",
+    "color": "#228B22",
     "birth_year": 2009,
-    "owner": 1
+    "owner": 1,
+    "achievements": [
+        {"achievement_name": "поймал мышку"}
+    ]
+    
 }
 
 ###
@@ -18,7 +22,7 @@ content-type: application/json
 
 {
     "name": "blackcat1",
-    "color": "black1",
+    "color": "#228B22",
     "birth_year": 2009
 }
 ###
