@@ -35,7 +35,8 @@ class AchievementSerializer(serializers.ModelSerializer):
 class CatSerializer(serializers.ModelSerializer):
     achievements = AchievementSerializer(many=True, required=False)
     age = serializers.SerializerMethodField()
-    
+    color = Hex2NameColor()  # Вот он - наш собственный тип поля
+
     class Meta:
         model = Cat
         fields = ('id', 'name', 'color', 'birth_year', 'owner', 'achievements', 'age')
