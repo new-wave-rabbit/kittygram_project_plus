@@ -1,6 +1,7 @@
 ###
 POST http://127.0.0.1:8000/cats/ HTTP/1.1
 content-type: application/json
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 {
     "name": "whitecat",
@@ -15,17 +16,26 @@ content-type: application/json
 
 ###
 GET http://127.0.0.1:8000/cats/1
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 ###
 GET http://127.0.0.1:8000/cats/recent-white-cats/
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 ###
 GET http://127.0.0.1:8000/mycats/3
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
+
+###
+GET http://127.0.0.1:8000/cats
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
+
 
 
 ###
 PATCH http://127.0.0.1:8000/cats/1/ HTTP/1.1
 content-type: application/json
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 {
     "name": "blackcat1",
@@ -37,6 +47,7 @@ GET http://127.0.0.1:8000/owners/
 ###
 POST http://127.0.0.1:8000/owners/ HTTP/1.1
 content-type: application/json
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
 
 {
     "first_name": "Иван",
@@ -46,6 +57,8 @@ content-type: application/json
 ### 
 POST http://127.0.0.1:8000/cats/ HTTP/1.1
 content-type: application/json
+Authorization: Token fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2
+
 
 {
     "name": "Барсик",
@@ -58,14 +71,6 @@ content-type: application/json
     ]
 } 
 
-###
-GET https://9cc2f663-486e-4680-8181-84edc9371f8b.serverhub.praktikum-services.ru/posts/
-
-
-###
-POST https://9cc2f663-486e-4680-8181-84edc9371f8b.serverhub.praktikum-services.ru/posts/
-content-type: application/json
-
 
 {
     "text": "Текст для моего поста",
@@ -75,3 +80,15 @@ content-type: application/json
         {"name": "личное"}
         ]
 } 
+
+
+### 
+POST http://127.0.0.1:8000/api-token-auth/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "idotsenko",
+    "password": "korgAX3GHSPA"
+}
+
+# "token": "fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2"
