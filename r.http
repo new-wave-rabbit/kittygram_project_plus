@@ -46,3 +46,21 @@ content-type: application/json
         {"name": "разбил вазу"}
     ]
 } 
+
+###
+GET https://9cc2f663-486e-4680-8181-84edc9371f8b.serverhub.praktikum-services.ru/posts/
+
+
+###
+POST https://9cc2f663-486e-4680-8181-84edc9371f8b.serverhub.praktikum-services.ru/posts/
+content-type: application/json
+
+
+{
+    "text": "Текст для моего поста",
+    "author": 1,
+    "tag": [
+        {"name": "хобби"},
+        {"name": "личное"}
+        ]
+} 
