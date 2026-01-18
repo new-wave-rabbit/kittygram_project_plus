@@ -3,8 +3,8 @@ POST http://127.0.0.1:8000/cats/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "blackcat",
-    "color": "#228B22",
+    "name": "whitecat",
+    "color": "White",
     "birth_year": 2009,
     "owner": 1,
     "achievements": [
@@ -14,7 +14,12 @@ content-type: application/json
 }
 
 ###
-GET http://127.0.0.1:8000/cats/
+GET http://127.0.0.1:8000/cats/1
+
+###
+GET http://127.0.0.1:8000/cats/recent-white-cats/
+
+
 
 ###
 PATCH http://127.0.0.1:8000/cats/1/ HTTP/1.1
