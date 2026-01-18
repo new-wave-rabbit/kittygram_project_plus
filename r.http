@@ -91,4 +91,11 @@ content-type: application/json
     "password": "korgAX3GHSPA"
 }
 
-# "token": "fe5fcd7eef899564ef3c6a74b7f5f855bc74f5b2"
+### 
+POST http://127.0.0.1:8000/auth/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "idotsenko",
+    "password": "korgAX3GHSPA"
+}
